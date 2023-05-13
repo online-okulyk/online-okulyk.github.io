@@ -1,0 +1,768 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Montserrat", monospace;
+}
+
+header {
+    background-color: antiquewhite;
+    height: 100px;
+    box-shadow: 0px 0px 5px #000;
+}
+
+.items {
+    display: flex;
+    justify-content: space-around;
+}
+
+#logo1 {
+    width: 100px;
+    height: 100px;
+}
+
+#logo2 {
+    width: 100px;
+    height: 100px;
+}
+
+.items > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 2.5%;
+    gap: 72px;
+
+    & #selected {
+        color: #7d2997;
+
+        &:hover {
+            border-color: #7d2997;
+        }
+
+    }
+
+}
+
+.items > ul li a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.row1 {
+    width: 18%; 
+    background: url(images/colonna.jpg);
+    background-size: cover;
+}
+
+.row2 {
+    width: 19%;
+    background: url(images/colonna2.jpg);
+    background-size: cover;
+    background-position-x: -150px;
+}
+
+.orta {
+    text-align: center;
+    height: 86.7vh;
+    width: 60%;
+}
+
+.social {
+    display: flex;
+    gap: 3%;
+    margin-top: 5%;
+    justify-content: center;
+
+    & a {
+
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: 0.5s;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px #000;
+        }
+        
+        &:nth-child(1) {
+            background: url(images/instagram.png);
+            background-size: cover;
+        }
+
+        &:nth-child(2) {
+            background: url(images/telegram.png);
+            background-size: cover;
+        }
+
+        &:nth-child(3) {
+            background: url(images/whatsapp.png);
+            background-size: cover;
+        }
+
+        &:nth-child(4) {
+            background: url(images/facebook.png);
+            background-size: cover;
+        }
+
+        &:nth-child(5) {
+            background: url(images/twitter.png);
+            background-size: cover;
+        }
+
+    }
+
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.test-content {
+    width: 60%;
+    margin-left: 20%;
+    height: 80vh;
+}
+
+.tests {
+    margin-top: 5%;
+}
+
+.tests > div {
+    margin-top: 3%;
+    margin-left: 18%;
+    width: 65%;
+    height: 80px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 20px 3px #C5CBFF;
+    }
+
+    &:active {
+        transform: scale(1.05);
+    }
+}
+
+.py {
+    background: url(images/py.png);
+    background-size: 600px;
+}
+
+.cpp {
+    background: url(images/cpp.png);
+    background-size: 600px;
+}
+
+.html {
+    background: url(images/html.png);
+    background-size: 600px;
+}
+
+.sign-up-content {
+    width: 60%;
+    height: 86vh;
+    margin-left: 20%;
+}
+
+.bg {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 55%);
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0px 10px 25px rgb(0,0,0,0.6);
+    border-radius: 10px;
+}
+
+.bg > h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.user-box {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.user-box input {
+    border: none;
+    border-bottom: 1px #000 solid;
+    outline: none;
+    width: 80%;
+    margin-left: 10%;
+    padding: 10px 0;
+    font-size: 16px;
+
+    &:focus {
+        border-bottom: 1.6px solid #000;
+    }
+
+    &:focus~label, &:valid~label { 
+        visibility: hidden;
+    }
+}
+
+.user-box label {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.bg form a {
+    position: absolute;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    left: 10%;
+    bottom: 10%;
+    transition: 0.5s;
+    background-color: #fff;
+    border-radius: 10px;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 5px 20px -1px #000;
+    }
+
+    &:active {
+        transform: scale(1);
+    }
+    
+}
+
+.contact-content {
+    width: 60%;
+    height: 86vh;
+    margin-left: 20%;
+}
+
+.contact-btns {
+    justify-content: center;
+    margin-top: 10%;
+    gap: 30px;
+    display: flex;
+}
+
+.contact-btns a {
+    position: relative;
+    background-color: red;
+    font-size: 30px;
+    color: red;
+    text-decoration: none;
+    border: 2px red solid;
+    border-radius: 30px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 6px;
+    padding-right: 20%;
+    transition: 0.5s;
+    border: none;
+
+    & span {
+        color: #fff;
+        position: absolute;
+        left: 25%;
+        top: 20%;
+    }
+
+    & i {
+        background-color: #fff;
+        margin-left: -10px;
+        padding: 10px;
+        padding-bottom: 0px;
+        border-radius: 30px;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 7px 25px #1b1b1b, 0px -7px 25px #fff;
+    }
+
+    &:active {
+        transform: translateY(0px);
+    }
+
+}
+
+.contact-content .info {
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.nav li a {
+    border-bottom: 1.5px solid antiquewhite;
+    transition: 0.5s;
+
+    &:hover {
+        border-color: #000;
+    }
+
+}
+
+.classes-content {
+    width: 100%;
+    height: 86vh;
+
+    & .title {
+        margin-top: 2%;
+        position: relative;
+        background-color: #ead192;
+        width: 100%;
+        height: 65px;
+        cursor: pointer;
+        margin-top: 5%;
+
+        & h2 {
+            position: absolute;
+            left: 3%;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+    }
+
+    & ._6cl {
+        margin-top: 3%;
+    }
+
+    ._7cl, ._6cl, ._8cl, ._9cl, ._10cl {
+        background-color: #f5eec4;
+    }
+
+    & .info {
+        font-weight: 400;
+        margin-left: 20px;
+        width: 95%;
+        text-align: left;
+
+        & pre {
+            font-weight: 400;
+            font-family: "Montserrat", monospace;
+        }
+
+        & span {
+            display: block;
+            padding: 10px;
+            background-color: burlywood;
+            border-radius: 10px;
+        }
+
+        & img {
+            margin-left: 2.4%;
+        }
+
+        & .imgs {
+
+            display: flex;
+            justify-content: space-around;
+            
+            & .img1 {
+                width: 400px;
+                height: 400px;
+                background: url(images/example11.png);
+                background-size: cover;
+            }
+
+            & .img2 {
+                width: 400px;
+                height: 400px;
+                background: url(images/example12.png);
+                background-size: cover;
+            }
+        }
+
+        & .imgs2 {
+            margin-left: 15%;
+        }
+
+        & nn {
+            font-size: 20px;
+            font-weight: 600;
+            margin-left: 50px;
+            letter-spacing: 0.1em;
+        } 
+
+        & tab {
+            margin-left: 40px;
+        }
+
+        & .massiveex {
+            width: 100%;
+            height: 350px;
+            background: url(images/massiveexample.png);
+            background-size: cover;
+            background-position-y: 10px;
+        }
+
+        & table {
+            border-collapse: collapse;
+            margin-left: 25%;
+            width: 50%;
+
+            & thead tr {
+                text-align: center;
+
+                & th {
+                    border: 1px #000 solid;
+                }
+            }
+
+            & tr {
+                
+                & td {
+                    text-align: center;
+                    border: 1px #000 solid;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.dev-t-content {
+    margin-left: 20%;
+    width: 60%;
+    height: 86vh;
+
+    & h2 {
+        font-weight: 400;
+        margin-top: 5%;
+    }
+
+    & .py {
+        display: flex;
+        gap: 35px;
+        background: #fff;
+        justify-content: left;
+
+        & .a-byte-of-py {
+            width: 200px;
+            height: 300px;
+            background: url(images/a-byte-of-py.jpg);
+            background-size: cover;
+            background-position-x: -8px;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            cursor: pointer;
+            transition: 0.5s;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/a-byte-of-py.jpg);
+                background-size: cover;
+                background-position-x: -8px;
+                transform: scale(1.05);
+            }
+
+        }
+    
+        & .groking-algo {
+            width: 200px;
+            height: 300px;
+            background: url(images/groking-algo.png);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            cursor: pointer;
+            transition: 0.5s;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/groking-algo.png);
+                background-size: cover;
+                transform: scale(1.05);
+            }
+        }
+
+        & .izu4aem-py {
+            width: 200px;
+            height: 300px;
+            background: url(images/izu4aem-py.png);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            cursor: pointer;
+            transition: 0.5s;
+
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/izu4aem-py.png);
+                transform: scale(1.05);
+                background-size: cover;
+            }
+
+        }
+
+        & .vnutrycpy {
+            width: 200px;
+            height: 300px;
+            background: url(images/vnutrycpy.png);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/vnutrycpy.png);
+                transform: scale(1.05);
+                background-size: cover;
+            }
+
+        }
+
+    }
+
+    & .cpp {
+        display: flex;
+        gap: 35px;
+        background: #fff;
+        justify-content: left;
+
+        & .yapcpp {
+            width: 200px;
+            height: 300px;
+            background: url(images/yapcpp.jpg);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/yapcpp.jpg);
+                transform: scale(1.05);
+                background-size: cover;
+            }
+
+        }
+
+        & .cppprimerp {
+            width: 200px;
+            height: 300px;
+            background: url(images/cppprimerp.png);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/cppprimerp.png);
+                transform: scale(1.05);
+                background-size: cover;
+            }
+
+        }
+
+        & .oopcpp {
+            width: 200px;
+            height: 300px;
+            background: url(images/oopcpp.png);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/oopcpp.png);
+                transform: scale(1.05);
+                background-size: cover;
+            }
+
+        }
+
+        & .dumaikakproger {
+            width: 200px;
+            height: 300px;
+            background: url(images/dumaikakproger.png);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/dumaikakproger.png);
+                transform: scale(1.05);
+                background-size: cover;
+            }
+
+        }
+
+    }
+
+    & .html {
+        display: flex;
+        gap: 35px;
+        background: #fff;
+            transition: 0.5s;
+            justify-content: left;
+
+        & .designhtml {
+            width: 200px;
+            height: 300px;
+            background: url(images/html-book.png);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/html-book.png);
+                transform: scale(1.05);
+                background-size: cover;
+            }
+
+        }
+
+        & .webdesign {
+            width: 200px;
+            height: 300px;
+            background: url(images/webdesign.png);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/webdesign.png);
+                transform: scale(1.05);
+                background-size: cover;
+            }
+
+        }
+
+        & .shporhtml {
+            width: 200px;
+            height: 300px;
+            background: url(images/shporhtml.png);
+            background-size: cover;
+            background-position-x: -20px;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/shporhtml.png);
+                background-size: cover;
+                transform: scale(1.05);
+                background-position-x: -20px;
+            }
+
+        }
+
+        & .htmlcss {
+            width: 200px;
+            height: 300px;
+            background: url(images/htmlcss.jpg);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/htmlcss.jpg);
+                transform: scale(1.05);
+                background-size: cover;
+            }
+
+        }
+
+    }
+
+    & .php {
+        display: flex;
+        gap: 35px;
+        background: #fff;
+        justify-content: left;
+
+        & .php1 {
+            width: 200px;
+            height: 300px;
+            background: url(images/php1.png);
+            background-position-x: -10px;
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/php1.png);
+                background-size: cover;
+                transform: scale(1.05);
+                background-position-x: -10px;
+            }
+
+        }
+
+        & .php2 {
+            width: 200px;
+            height: 300px;
+            background: url(images/php2.png);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/php2.png);
+                transform: scale(1.05);
+                background-size: cover;
+            }
+
+        }
+
+        & .php3 {
+            width: 200px;
+            height: 300px;
+            background: url(images/php3.png);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/php3.png);
+                transform: scale(1.05);
+                background-size: cover;
+            }
+
+        }
+
+        & .php4 {
+            width: 200px;
+            height: 300px;
+            background: url(images/php4.png);
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgb(0,0,0,0.9);
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/php4.png);
+                transform: scale(1.05);
+                background-size: cover;
+            }
+
+        }
+
+    }
+
+}
